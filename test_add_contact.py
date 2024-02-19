@@ -1,7 +1,7 @@
 from selenium.webdriver.firefox.webdriver import WebDriver
 from selenium.webdriver.support.select import Select
 import unittest
-from contact import Contact
+from contact import *
 
 
 def is_alert_present(wd):
@@ -25,14 +25,14 @@ class TestAddContact(unittest.TestCase):
         self.open_home_page(wd)
         self.log_in(wd, username="admin", password="secret")
         self.open_contact_page(wd)
-        self.fill_fio(wd, Contact(firstname="Yuriy", middlename="Ivanovich", lastname="Mishin", nickname="Yesman"))
-        self.company_name(wd, companyname="OOO Horns and Hooves")
-        self.contact_information(wd, address="Moscow City", homephone="84951231234", mobilephone="89997776655",
+        self.fill_fio(wd, FIO(firstname="Yuriy", middlename="Ivanovich", lastname="Mishin", nickname="Yesman"))
+        self.company_name(wd, Office(title_company="OOO Horns and Hooves"))
+        self.contact_information(wd, Contact(address="Moscow City", homephone="84951231234", mobilephone="89997776655",
                                  position="QA Engineer", fax="8495", main_email="pochta1@ru.ru",
                                  other_email="pochta2@ru.ru",
-                                 extra_email="pochta3@ru.ru")
-        self.specify_the_birthday(wd, day_b="1", month_b="October", year_b="1990")
-        self.specify_the_anniversary(wd, day_a="1", month_a="January", year_a="2000")
+                                 extra_email="pochta3@ru.ru", web_site="wwww"))
+        self.specify_the_birthday(wd, Birthday(day_b="1", month_b="October", year_b="1990"))
+        self.specify_the_anniversary(wd, Anniversary(day_a="1", month_a="January", year_a="2000"))
         self.selection_group(wd, select_group="dfgh")
         self.log_out(wd)
 
@@ -45,61 +45,59 @@ class TestAddContact(unittest.TestCase):
         wd.find_element_by_xpath("//div[@id='content']/form/select[5]/option[3]").click()
         wd.find_element_by_xpath("//div[@id='content']/form/input[20]").click()
 
-    def specify_the_anniversary(self, wd, day_a, month_a, year_a):
+    def specify_the_anniversary(self, wd, contact):
         # select a day
         wd.find_element_by_name("aday").click()
-        Select(wd.find_element_by_name("aday")).select_by_visible_text(day_a)
+        Select(wd.find_element_by_name("aday")).select_by_visible_text(contact.day_a)
         wd.find_element_by_xpath("//div[@id='content']/form/select[3]/option[3]").click()
         # select a month
         wd.find_element_by_name("amonth").click()
-        Select(wd.find_element_by_name("amonth")).select_by_visible_text(month_a)
+        Select(wd.find_element_by_name("amonth")).select_by_visible_text(contact.month_a)
         # fill a year
         wd.find_element_by_xpath("//div[@id='content']/form/select[4]/option[2]").click()
         wd.find_element_by_name("ayear").click()
         wd.find_element_by_name("ayear").clear()
-        wd.find_element_by_name("ayear").send_keys(year_a)
+        wd.find_element_by_name("ayear").send_keys(contact.year_a)
 
-    def specify_the_birthday(self, wd, day_b, month_b, year_b):
+    def specify_the_birthday(self, wd, contact):
         wd.find_element_by_name("bday").click()
-        Select(wd.find_element_by_name("bday")).select_by_visible_text(day_b)
+        Select(wd.find_element_by_name("bday")).select_by_visible_text(contact.day_b)
         wd.find_element_by_xpath("//option[@value='1']").click()
         wd.find_element_by_name("bmonth").click()
-        Select(wd.find_element_by_name("bmonth")).select_by_visible_text(month_b)
+        Select(wd.find_element_by_name("bmonth")).select_by_visible_text(contact.month_b)
         wd.find_element_by_xpath("//option[@value='October']").click()
         wd.find_element_by_name("byear").click()
         wd.find_element_by_name("byear").clear()
-        wd.find_element_by_name("byear").send_keys(year_b)
+        wd.find_element_by_name("byear").send_keys(contact.year_b)
 
-    def contact_information(self, wd, address, homephone, mobilephone,
-                            position, fax, main_email, other_email,
-                            extra_email):
+    def contact_information(self, wd, contact):
         # fill address
         wd.find_element_by_name("address").clear()
-        wd.find_element_by_name("address").send_keys(address)
+        wd.find_element_by_name("address").send_keys(contact.address)
         # fill phone numbers
         wd.find_element_by_name("home").clear()
-        wd.find_element_by_name("home").send_keys(homephone)
+        wd.find_element_by_name("home").send_keys(contact.homephone)
         wd.find_element_by_name("mobile").clear()
-        wd.find_element_by_name("mobile").send_keys(mobilephone)
+        wd.find_element_by_name("mobile").send_keys(contact.mobilephone)
         wd.find_element_by_name("work").clear()
-        wd.find_element_by_name("work").send_keys(position)
+        wd.find_element_by_name("work").send_keys(contact.position)
         wd.find_element_by_name("fax").clear()
-        wd.find_element_by_name("fax").send_keys(fax)
+        wd.find_element_by_name("fax").send_keys(contact.fax)
         # fill e-mail
         wd.find_element_by_name("email").clear()
-        wd.find_element_by_name("email").send_keys(main_email)
+        wd.find_element_by_name("email").send_keys(contact.main_email)
         wd.find_element_by_name("email2").clear()
-        wd.find_element_by_name("email2").send_keys(other_email)
+        wd.find_element_by_name("email2").send_keys(contact.other_email)
         wd.find_element_by_name("email3").clear()
-        wd.find_element_by_name("email3").send_keys(extra_email)
+        wd.find_element_by_name("email3").send_keys(contact.extra_email)
         # fill homepage
         wd.find_element_by_name("homepage").clear()
-        wd.find_element_by_name("homepage").send_keys("wwwwwww")
+        wd.find_element_by_name("homepage").send_keys(contact.web_site)
 
-    def company_name(self, wd, companyname):
+    def company_name(self, wd, contact):
         wd.find_element_by_name("company").click()
         wd.find_element_by_name("company").clear()
-        wd.find_element_by_name("company").send_keys(companyname)
+        wd.find_element_by_name("company").send_keys(contact.title_company)
 
     def fill_fio(self, wd, contact):
         wd.find_element_by_name("theform").click()
