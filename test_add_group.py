@@ -1,11 +1,11 @@
 import pytest
 from group import Group
-from application_group import ApplicationGroup
+from application import ApplicationGroup
 
 
 @pytest.fixture
 def app(request):
-    fixture = ApplicationGroup
+    fixture = ApplicationGroup()
     request.addfinalizer(fixture.destroy)
     return fixture
 
