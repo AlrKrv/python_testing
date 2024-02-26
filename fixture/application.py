@@ -1,6 +1,7 @@
 from selenium.webdriver.firefox.webdriver import WebDriver
 from fixture.session import SessionHelper
-from fixture.helper import *
+from fixture.group import GroupHelper
+from fixture.contact import ContactHelper
 
 
 class Application:
@@ -12,8 +13,8 @@ class Application:
         self.verificationErrors = []
         self.accept_next_alert = True
         self.session = SessionHelper(self)
-        self.helper = GroupHelper()
-        self.helper = ContactHelper()
+        self.group = GroupHelper(self)
+        self.contact = ContactHelper(self)
 
     def open_home_page(self):
         wd = self.wd
