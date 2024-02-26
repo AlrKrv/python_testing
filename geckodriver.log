@@ -2533,3 +2533,70 @@ console.warn: LoginRecipes: "Falling back to a synchronous message for: http://l
 Dynamically enable window occlusion 1
 console.error: (new AbortError("Actor 'LoginManager' destroyed before query 'PasswordManager:findLogins' was resolved", (void 0)))
 console.error: (new AbortError("IndexedDB: main/password-recipes list() IndexedDB:  execute() A request was aborted, for example through a call to IDBTransaction.abort.", "resource://services-settings/IDBHelpers.sys.mjs", 16))
+1708979063840	geckodriver	INFO	Listening on 127.0.0.1:65531
+1708979066913	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\AS5F46~1.KRY\\AppData\\Local\\Temp\\rust_mozprofileSlxuQZ"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1708979067858	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1708979068015	Marionette	INFO	Listening on port 49183
+Read port: 49183
+1708979068405	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://localhost."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://localhost."
+1708979080332	Marionette	INFO	Stopped listening on port 49183
+Dynamically enable window occlusion 1
+console.error: (new AbortError("Actor 'LoginManager' destroyed before query 'PasswordManager:findLogins' was resolved", (void 0)))
+console.error: (new AbortError("IndexedDB: main/password-recipes list() IndexedDB:  execute() A request was aborted, for example through a call to IDBTransaction.abort.", "resource://services-settings/IDBHelpers.sys.mjs", 16))
+1708979102176	geckodriver	INFO	Listening on 127.0.0.1:49328
+1708979105272	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\AS5F46~1.KRY\\AppData\\Local\\Temp\\rust_mozprofileRXCotk"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1708979106037	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1708979106185	Marionette	INFO	Listening on port 49351
+Read port: 49351
+1708979106556	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://localhost."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://localhost."
+1708979112203	Marionette	INFO	Stopped listening on port 49351
+Dynamically enable window occlusion 1
+1708979114391	geckodriver	INFO	Listening on 127.0.0.1:49679
+1708979117434	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\AS5F46~1.KRY\\AppData\\Local\\Temp\\rust_mozprofileAxlxea"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1708979118178	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1708979118319	Marionette	INFO	Listening on port 49699
+Read port: 49699
+1708979118688	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://localhost."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://localhost."
+1708979123444	Marionette	INFO	Stopped listening on port 49699
+Dynamically enable window occlusion 1
+1708979219943	geckodriver	INFO	Listening on 127.0.0.1:50035
+1708979223025	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\AS5F46~1.KRY\\AppData\\Local\\Temp\\rust_mozprofile4qqXFk"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1708979223699	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1708979223837	Marionette	INFO	Listening on port 50060
+Read port: 50060
+1708979224179	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://localhost."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://localhost."
+1708979231380	Marionette	INFO	Stopped listening on port 50060
+Dynamically enable window occlusion 1
+1708979232960	geckodriver	INFO	Listening on 127.0.0.1:50127
+1708979236001	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\AS5F46~1.KRY\\AppData\\Local\\Temp\\rust_mozprofilepyLLv2"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1708979236691	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1708979236848	Marionette	INFO	Listening on port 50146
+Read port: 50146
+1708979237219	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://localhost."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://localhost."
+1708979244461	Marionette	INFO	Stopped listening on port 50146
+Dynamically enable window occlusion 1
