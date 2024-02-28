@@ -13,8 +13,8 @@ class Application:
         self.verificationErrors = []
         self.accept_next_alert = True
         self.session = SessionHelper(self)
-        self.group = GroupHelper(self)
-        self.contact = ContactHelper(self)
+        self.group = GroupHelper()
+        self.contact = ContactHelper()
 
     def open_home_page(self):
         wd = self.wd

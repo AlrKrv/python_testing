@@ -7,11 +7,11 @@ class ContactHelper:
         self.app = app
 
     def open_contact_page(self):
-        wd = self.wd
+        wd = self.app.wd
         wd.find_element_by_link_text("add new").click()
 
     def create_contact(self, contact):
-        wd = self.wd
+        wd = self.app.wd
         self.open_contact_page()
         # fill contact information
         # fill_fio
