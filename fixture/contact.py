@@ -3,7 +3,7 @@ from selenium.webdriver.support.select import Select
 
 class ContactHelper:
 
-    def __int__(self, app):
+    def __init__(self, app):
         self.app = app
 
     def open_contact_page(self):
